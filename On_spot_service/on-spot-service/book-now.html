@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now</title>
+    <link rel="stylesheet" href="book.css">
+    <!-- Add Leaflet library -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Book Now</h1>
+    </header>
+    <main>
+        <section>
+            <form id="booking-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="service">Select Service:</label>
+                <select id="service" name="service" required>
+                    <option value="plumbers">Plumbers</option>
+                    <option value="electricians">Electricians</option>
+                    <option value="carpenters">Carpenters</option>
+                    <option value="laptop-service">Laptop Service</option>
+                    <option value="system-service">System Service</option>
+                    <option value="cleaning-service">Cleaning Service</option>
+                    <option value="painters">Painters</option>
+                    <option value="ac-repair">AC Repair</option>
+                    <option value="home-appliances">Home Appliances</option>
+                    <option value="beauty-services">Beauty Services</option>
+                </select>
+
+                <button type="button" id="get-location">Get Current Location</button>
+                <p id="location-output"></p>
+
+                <button type="submit">Book Now</button>
+            </form>
+
+            <!-- Map container -->
+            <div id="map" style="height: 400px;"></div>
+        </section>
+    </main>
+
+    <script src="book.js"></script>
+    <script>
+        // Initialize map
+        var map = L.map('map').setView([51.505, -0.09], 2); // [lat, lon], zoom level
+
+        // Add OpenStreetMap tiles with no labels
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            noWrap: true,
+            detectRetina: true,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            subdomains: ['a', 'b', 'c']
+        }).addTo(map);
+
+        // Example for getting user location
+        document.getElementById('get-location').addEventListener('click', function() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var lat = position.coords.latitude;
+                    var lon = position.coords.longitude;
+                    map.setView([lat, lon], 12); // Zoom level 12 for a closer view
+                });
+            } else {
+                alert('Geolocation is not supported by this browser.');
+            }
+        });
+    </script>
+</body>
+</html>

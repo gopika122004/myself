@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnSpot Service</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">OnSpot Service</div>
+        <nav>
+            <ul>
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="contact.html"><i class="fas fa-info-circle"></i> Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search services...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="auth-links">
+            <a href="login.html" class="btn">Login</a>
+            <a href="signup.html" class="btn">Signup</a>
+            <a href="book-now.html" class="btn">Book Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <div class="welcome-user">
+                <img src="H1.avif" alt="User Image" class="user-image">
+                <h1>Welcome</h1>
+                <p>Your personalized solution for all local services!</p>
+                <p class="tagline">"Seamless Service, Perfect Experience"</p>
+                <button onclick="scrollToSection('services')">Explore Services</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Services Section -->
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="category-container">
+                <div class="category-item">
+                    <img src="PLUMBER.jpg" alt="Plumbers">
+                    <h3>Plumbers</h3>
+                    <p>Professional plumbing services for all your needs.</p>
+                    <a href="book-now.html?service=Plumbers" class="glow-button">Book Now</a>
+                </div>
+                <div class="category-item">
+                    <img src="ELECTRICIAN.jpg" alt="Electricians">
+                    <h3>Electricians</h3>
+                    <p>Expert electrical repairs and installations.</p>
+                    <a href="book-now.html?service=Electricians" class="glow-button">Book Now</a>
+                </div>
+                <div class="category-item">
+                    <img src="FURNITURE.jpg" alt="Carpenters">
+                    <h3>Carpenters</h3>
+                    <p>Custom furniture and woodwork services.</p>
+                    <a href="book-now.html?service=Carpenters" class="glow-button">Book Now</a>
+                </div>
+                <div class="category-item">
+                    <img src="LAPTOP.jpg" alt="Laptop Service">
+                    <h3>Laptop Service</h3>
+                    <p>Repair and maintenance for laptops and PCs.</p>
+                    <a href="book-now.html?service=Laptop%20Service" class="glow-button">Book Now</a>
+                </div>
+                <div class="category-item">
+                    <img src="SYSTEM.jpg" alt="System Service">
+                    <h3>System Service</h3>
+                    <p>Installation and troubleshooting of IT systems.</p>
+                    <a href="book-now.html?service=System%20Service" class="glow-button">Book Now</a>
+                </div>
+                <div class="category-item">
+                    <img src="CLEANING.jpeg" alt="Cleaning Services">
+                    <h3>Cleaning Services</h3>
+                    <p>Residential and commercial cleaning solutions.</p>
+                    <a href="book-now.html?service=Cleaning%20Services" class="glow-button">Book Now</a>
+                </div>
+                <div class="category-item">
+                    <img src="PAINTERS.jpg" alt="Painters">
+                    <h3>Painters</h3>
+                    <p>Transform your space with professional painting.</p>
+                    <a href="book-now.html?service=Painters" class="glow-button">Book Now</a>
+                </div>
+                <div class="category-item">
+                    <img src="AC.jpg" alt="AC Repair">
+                    <h3>AC Repair</h3>
+                    <p>Efficient air conditioning repair and servicing.</p>
+                    <a href="book-now.html?service=AC%20Repair" class="glow-button">Book Now</a>
+                </div>
+                <div class="category-item">
+                    <img src="HOME.jpg" alt="Home Appliances">
+                    <h3>Home Appliances</h3>
+                    <p>Repair and maintenance for your appliances.</p>
+                    <a href="book-now.html?service=Home%20Appliances" class="glow-button">Book Now</a>
+                </div>
+                <div class="category-item">
+                    <img src="BEAUTY.avif" alt="Beauty Services">
+                    <h3>Beauty Services</h3>
+                    <p>Home salon services by trained professionals.</p>
+                    <a href="book-now.html?service=Beauty%20Services" class="glow-button">Book Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features">
+            <h2>Why Choose OnSpot Service?</h2>
+            <div class="feature-container">
+                <div class="feature-item">
+                    <i class="fas fa-clock"></i>
+                    <h4>Quick Service</h4>
+                    <p>Fast and efficient services available anytime you need.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-thumbs-up"></i>
+                    <h4>Quality Guaranteed</h4>
+                    <p>We ensure top-notch service standards for all services.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-user-check"></i>
+                    <h4>Professional Experts</h4>
+                    <p>Trained professionals for every service you require.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h4>Affordable Pricing</h4>
+                    <p>Competitive prices for premium services.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews">
+            <h2>Customer Reviews & Feedback</h2>
+            <div class="review-container">
+                <div class="review-item">
+                    <p>"Fantastic service! The plumber was very professional."</p>
+                    <h4>- Jane Doe</h4>
+                </div>
+                <div class="review-item">
+                    <p>"Highly recommend their cleaning services. Great value!"</p>
+                    <h4>- John Smith</h4>
+                </div>
+                <div class="review-item">
+                    <p>"The beauty services were excellent, right at home!"</p>
+                    <h4>- Emily Davis</h4>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 OnSpot Service. All rights reserved.</p>
+        <p>
+            Privacy Policy | Terms and Conditions | Available on:
+            <img src="images/google-play.png" alt="Google Play" width="100">
+            <img src="images/apple-store.png" alt="Apple Store" width="100">
+        </p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+</body>
+</html>
