@@ -279,8 +279,20 @@
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
   (function(){
-    emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual EmailJS public key
+    emailjs.init("YOUR_PUBLIC_KEY"); //  Replace with your actual public key
   })();
+
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this) //  Replace these
+      .then(function(response) {
+         alert("✅ Message sent successfully!");
+      }, function(error) {
+         alert("❌ Failed to send message. Try again!");
+         console.log(error);
+      });
+  });
 </script>
 
 </body>
