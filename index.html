@@ -277,20 +277,22 @@
     <!-- Particle.js Library -->
    <!-- EmailJS SDK -->
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
 <script>
-  (function(){
-    emailjs.init("YOUR_PUBLIC_KEY"); //  Replace with your actual public key
+  (function() {
+    emailjs.init("YOUR_PUBLIC_KEY"); // 🟡 Replace this
   })();
 
   document.getElementById("contactForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this) //  Replace these
+    emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
       .then(function(response) {
-         alert("✅ Message sent successfully!");
+        alert("✅ Message sent successfully!");
+        document.getElementById("contactForm").reset();
       }, function(error) {
-         alert("❌ Failed to send message. Try again!");
-         console.log(error);
+        alert("❌ Failed to send message. Try again.");
+        console.error(error);
       });
   });
 </script>
